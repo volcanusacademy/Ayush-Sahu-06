@@ -1,0 +1,96 @@
+<html> 
+    <head><title> Bank Registeration form</title></head>
+    <body>
+        <style>
+            body{
+                background-color: #00FA9A;
+                 
+            }
+            table{
+                
+                font-weight: 1000;
+                font-size: large;
+            }
+        </style>
+        <center><form action="submit_bank_form.html" method="">
+            <table>
+                <tr><td colspan="2"><center><i><b>Bank Account Application form</b></i></center></td></tr>
+                <tr>
+                    <td><label>HolderName</label></td>
+                    <td><input type="text" name="hname" placeholder = "enter your name" required></td>
+                </tr>
+                <tr><td><label>Fathers_name</label></td>
+                <td><input type="text" name="fname" placeholder= "fathers nanme" required></td>
+            </tr>
+            <tr>
+                <td><label>DOB</label></td>
+                <td><input type="date" name="dob"></td>
+            </tr>
+            <tr>
+                <td><label>Addhar_number</label></td>
+                <td><input type="text" name="adhar" required></td>
+            </tr>
+            <tr>
+                <td><label>Addharcard</label></td>
+                <td><input type="file" name="adharcard" required></td>
+            </tr>
+            <tr>
+                <td><label>Pan_number</label></td>
+                <td><input type="text" name="pan" required></td>
+            </tr>
+            <tr>
+                <td><label>Pancard</label></td>
+                <td><input type="file" name="pancard" required></td>
+            </tr>
+           
+            <tr>
+                <td><label>Gender</label></td>
+                <td>
+                   Male<input type="radio" name="gen" value="male">
+                 Female<input type="radio" name="gen" value="female">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Account_type</label></td>
+                <td>
+                    <select>
+                        <option>select Account</option>
+                        <option value="Saving">Saving</option>
+                        <option value="Fixed_deposit">Fixed_deposit</option>
+                        <option value="Bussiness">Bussiness</option>
+                        <option value="checking_account">checking_account</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label>mobile_number</label></td>
+                <td><input type="text" name="mob" maxlength="13" value="+91"></td>
+            </tr>
+            <tr>
+                <td><label>city</label></td>
+                <td>
+                    <select>
+                        <option>enter city</option>
+                        <option value="Sagar">Sagar</option>
+                        <option value="indore">indore</option>
+                        <option value="bhopal">bhopal</option>
+                        <option value="ujjain">ujjain</option>
+                        <option value="Satna">Satna</option>
+                    </select>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td colspan="2">
+                    <center>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="reset">
+                </center></td>
+            </tr>
+            </table>
+        </form>
+    </center>
+
+    </body>
+</html>
