@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Recipe Finder</title>
+</head>
+<body>
+    <header>
+        <h1>Recipe Finder</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for recipes...">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+    <main>
+        <div class="recipe-cards" id="recipeCards">
+            <!-- Display search results here using JavaScript -->
+          
+        </div>
+        <div >
+            <img src="fresh-gourmet-meal-beef-taco-salad-plate-generated-by-ai.jpg" id="imgbg" alt="">
+
+        </div>
+       
+    </main>
+    <script>
+        // Sample recipe data (you can replace it with actual data)
+const recipes = [
+    {
+        title: "Maggie",
+        image: "C:\\Users\\ayush\\OneDrive\\Desktop\\OneDrive\\Desktop\\Frontened Folder\\bottom-view-ramen-noodles-with-coriander-bowl-dark-table.jpg"
+    },
+    {
+        title: "Pizza",
+        image: "C:\\Users\\ayush\\Downloads\\pizza-pizza-filled-with-tomatoes-salami-olives.jpg",
+    },
+];
+
+const searchInput = document.getElementById("searchInput");
+const recipeCards = document.getElementById("recipeCards");
+
+function displayRecipes() {
+    recipeCards.innerHTML = "";
+    recipes.forEach((recipe) => {
+        const card = document.createElement("div");
+        card.classList.add("recipe-card");
+        card.innerHTML = `
+            <img src="${recipe.image}" alt="${recipe.title}">
+            <h2>${recipe.title}</h2>
+            <button  onclick="showRecipe()">View Recipe</button>
+        `;
+        recipeCards.appendChild(card);
+    });
+}
+
+document.getElementById("searchButton").addEventListener("click", displayRecipes);
+function showRecipe() {
+            const recipe = document.getElementById('recipeContent');
+            recipe.style.display = 'block'; // Show the recipe when the button is clicked
+        }
+    </script>
+    <style>
+        /* Reset some default styles and set up basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+
+#searchInput {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#searchButton {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.main {
+    padding: 20px;
+}
+
+.recipe-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+.recipe-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.recipe-card h2 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.recipe-card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+#imgbg{
+    width: 1300px;
+    height: 600px;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+
+    </style>
+</body>
+</html>
